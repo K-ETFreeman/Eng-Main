@@ -113,6 +113,37 @@ document.addEventListener('scroll', function () {
   });
 }
 ;
+var awardsSwiper = new Swiper('.trusts__container', {
+  direction: 'horizontal',
+  loop: true,
+  breakpoints: {
+    320: {
+      slidesPerView: 1,
+      centeredSlides: true,
+      spaceBetween: 30
+    },
+    500: {
+      slidesPerView: 2,
+      centeredSlides: false,
+      spaceBetween: 50
+    },
+    700: {
+      slidesPerView: 3,
+      centeredSlides: false,
+      spaceBetween: 50
+    },
+    1200: {
+      slidesPerView: 4,
+      centeredSlides: false,
+      spaceBetween: 50
+    }
+  },
+  navigation: {
+    nextEl: '.trusts__arrow_right',
+    prevEl: '.trusts__arrow_left'
+  }
+});
+;
 var casesSwiper = new Swiper('.cases__swiper', {
   direction: 'horizontal',
   loop: true,
@@ -176,6 +207,79 @@ document.querySelectorAll('[data-bar]').forEach(function (item) {
   return new SimpleBar(item, {
     autoHide: false
   });
+});
+;
+var awardsSwiper = new Swiper('.awards__container', {
+  direction: 'horizontal',
+  loop: true,
+  breakpoints: {
+    320: {
+      slidesPerView: 1,
+      centeredSlides: true,
+      spaceBetween: 30
+    },
+    500: {
+      slidesPerView: 2,
+      centeredSlides: false,
+      spaceBetween: 30
+    },
+    600: {
+      slidesPerView: 2,
+      centeredSlides: false,
+      spaceBetween: 40
+    },
+    700: {
+      slidesPerView: 2,
+      centeredSlides: false,
+      spaceBetween: 70
+    },
+    800: {
+      slidesPerView: 2,
+      centeredSlides: false,
+      spaceBetween: 100
+    },
+    850: {
+      slidesPerView: 3,
+      centeredSlides: true,
+      spaceBetween: 30
+    },
+    1000: {
+      slidesPerView: 3,
+      centeredSlides: true,
+      spaceBetween: 40
+    },
+    1100: {
+      slidesPerView: 3,
+      centeredSlides: true,
+      spaceBetween: 50
+    },
+    1170: {
+      slidesPerView: 4,
+      centeredSlides: false,
+      spaceBetween: 50
+    },
+    1700: {
+      slidesPerView: 5,
+      centeredSlides: false,
+      spaceBetween: 50
+    }
+  },
+  on: {
+    init: function init() {
+      document.querySelectorAll('.awards__container .popuping').forEach(function (item) {
+        popupCheck(item);
+      });
+    },
+    breakpoint: function breakpoint() {
+      document.querySelectorAll('.awards__container .popuping').forEach(function (item) {
+        return popupCheck(item);
+      });
+    }
+  },
+  navigation: {
+    nextEl: '.awards__arrow_right',
+    prevEl: '.awards__arrow_left'
+  }
 });
 ;
 {
