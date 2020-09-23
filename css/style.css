@@ -168,6 +168,15 @@ h2 {
 .logo_footer svg {
   width: 72px;
   height: 72px;
+  margin-right: 20px !important;
+}
+
+.logo_footer .logo__upper {
+  font-size: 31px;
+}
+
+.logo_footer .logo__name {
+  font-size: 22px;
 }
 
 .logo__name {
@@ -3296,6 +3305,14 @@ section {
     width: calc(54px + (100vw - 1440px) * (0.0375));
   }
 
+  .logo_footer .logo__upper {
+    font-size: calc(23.25px + (100vw - 1440px) * (0.01615));
+  }
+
+  .logo_footer .logo__name {
+    font-size: calc(16.5px + (100vw - 1440px) * (0.01146));
+  }
+
   .logo__name {
     font-size: calc(10.5px + (100vw - 1440px) * (0.00729));
   }
@@ -3524,6 +3541,14 @@ section {
 
   .logo_footer svg {
     width: 54px;
+  }
+
+  .logo_footer .logo__upper {
+    font-size: 23.25px;
+  }
+
+  .logo_footer .logo__name {
+    font-size: 16.5px;
   }
 
   .logo__name {
