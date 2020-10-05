@@ -525,6 +525,21 @@ h2 {
       -ms-flex-align: center;
           align-items: center;
   padding: 0px 15px;
+  position: relative;
+}
+
+.header__nav a::before {
+  z-index: -1;
+  -webkit-transition: .3s ease-out;
+  -o-transition: .3s ease-out;
+  transition: .3s ease-out;
+  position: absolute;
+  left: 0;
+  top: 0;
+  content: '';
+  background-color: white;
+  height: 0;
+  width: 100%;
 }
 
 .header__langcontainer {
@@ -2278,13 +2293,22 @@ section {
   }
 
   .header__nav a {
-    -webkit-transition: .4s ease;
-    -o-transition: .4s ease;
-    transition: .4s ease;
+    -webkit-transition: .3s ease-out;
+    -o-transition: .3s ease-out;
+    transition: .3s ease-out;
+    -webkit-transform-origin: bottom;
+        -ms-transform-origin: bottom;
+            transform-origin: bottom;
   }
 
   .header__nav a:hover {
-    background-color: white;
+    -webkit-transform: scale(1.03);
+        -ms-transform: scale(1.03);
+            transform: scale(1.03);
+  }
+
+  .header__nav a:hover::before {
+    height: 100%;
   }
 
   .burger {
